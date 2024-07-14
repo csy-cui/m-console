@@ -1,0 +1,40 @@
+{
+  "name": "m-console",
+  "version": "0.0.1-beta",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "dev:test": "cross-env ENV=test rollup -c -w",
+    "prettier": "prettier --write ."
+  },
+  "author": "lk",
+  "license": "MIT",
+  "keywords": [],
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@tsconfig/svelte": "^5.0.4",
+    "cross-env": "^7.0.3",
+    "prettier": "^2.8.3",
+    "rollup": "^2.75.7",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-svelte": "^7.2.2",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kunkunj/thesjs.git"
+  },
+  "dependencies": {
+  }
+}
