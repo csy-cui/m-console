@@ -27,7 +27,7 @@ export default {
   input: './src/main.ts',
   output: [
     {
-      file: `dist/sdk.min.js`,
+      file: `dist/mConsole.min.js`,
       format: 'umd',
       sourcemap: true,
       name: packageJson.name,
