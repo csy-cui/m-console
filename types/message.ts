@@ -1,5 +1,6 @@
 
-export type ConsleMethods = keyof typeof console
+
+export type ConsleMethods = keyof Omit<typeof console, 'Console'>
 
 export type CommitMessage = {
     type: ConsleMethods,
