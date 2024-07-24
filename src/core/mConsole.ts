@@ -1,9 +1,10 @@
-import { mConsoleImpl, mConsoleOption,globalWindow } from "../impl/console.impl";
+import { mConsoleImpl, mConsoleOption, globalWindow } from "../impl/console.impl";
 import Container from '../view/container.svelte';
+import { LogStore, StorageStore, NetworkStore } from './store/store'
 
 export class mConsole implements mConsoleImpl {
     static _instance: mConsole;
-    id=1
+    $vnode: any;
     constructor(option: mConsoleOption) {
         //单例模式
         if (!!(window as globalWindow).mConsole && mConsole._instance) {
@@ -13,8 +14,13 @@ export class mConsole implements mConsoleImpl {
         mConsole._instance = this
     }
     private _initView() {
-        new Container({
+        this.$vnode = new Container({
             target: document.body,
+            props: {
+                LogStore,
+                NetworkStore,
+                StorageStore
+            }
         })
     }
 }

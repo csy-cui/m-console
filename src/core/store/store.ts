@@ -1,6 +1,6 @@
 import { CommitMessage } from "../../../types/message"
 
-class State {
+class Store {
     collection: Array<CommitMessage> = []
     namespace?: string
     constructor(namespace?: string) {
@@ -17,6 +17,6 @@ class State {
     }
 }
 
-export const NetworkState = new State('network')
-export const LogState = new State('log')
-export const StorageState = new State('storage')
+export const NetworkStore = new Store('network')
+export const LogStore = new Store('log')
+export const StorageStore = new Store('storage')
