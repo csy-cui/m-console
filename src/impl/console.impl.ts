@@ -4,7 +4,8 @@ export type globalWindow = Window & { mConsole?: mConsoleImpl }
 
 
 export interface mConsoleImpl {
-    constructor: Function,
+    constructor: Function;
+    id: number
 }
 
 export type mConsoleOption = {
