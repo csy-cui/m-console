@@ -1,6 +1,6 @@
 import { CommitMessage } from "../../../types/message"
 
-class Store {
+export class Store {
     collection: Array<CommitMessage> = []
     namespace?: string
     constructor(namespace?: string) {
