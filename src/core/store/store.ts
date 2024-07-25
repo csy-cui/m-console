@@ -3,10 +3,12 @@ import { CommitMessage } from "../../../types/message"
 export class Store {
     collection: Array<CommitMessage> = []
     namespace?: string
+    commit?:Function
     constructor(namespace?: string) {
         this.namespace = namespace
     }
     push(item: CommitMessage) {
+        this.commit && this.commit(item)
         this.collection.push(item)
     }
     clear() {
