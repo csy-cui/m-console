@@ -11,10 +11,9 @@
     export const logStore = setContext("LogStore", LogStore);
     export const storageStore = setContext("StorageStore", StorageStore);
 
-    let theme = "dark";
+    let theme = "light";
 
     function renderPanle(node){
-        node.classList.add(theme == 'light' ? 'm_light_theme_var' : 'm_dark_theme_var')
     }
     
 </script>
@@ -22,7 +21,7 @@
 
 <Button></Button>
 
-<div use:renderPanle id="_mConsole_panle" class="m-panle">
+<div use:renderPanle id="_mConsole_panle" class="m-panle m_theme_var">
     <div class="m-panle-content"></div>
 </div>
 
