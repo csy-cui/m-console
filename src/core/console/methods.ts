@@ -4,7 +4,7 @@ type Parmas = Array<keyof any>
 
 class Methods {
     log(parms: Parmas) {
-        document.write(JSON.stringify(parms))
+        // document.write(JSON.stringify(parms))
     }
     warn(parms: Parmas) { }
     assert(parms: Parmas) { }

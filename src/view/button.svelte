@@ -35,27 +35,21 @@
             down = false;
         }
 
-        function click() {
-            console.log(1111)
-        }
-
-        window.addEventListener("touchstart", start);
-        window.addEventListener("touchmove", move);
+        node.addEventListener("touchstart", start);
+        node.addEventListener("touchmove", move);
         window.addEventListener("touchend", end);
-        window.addEventListener("mousedown", start);
+        node.addEventListener("mousedown", start);
         window.addEventListener("mousemove", move);
         window.addEventListener("mouseup", end);
-        window.addEventListener("click", click);
 
         return {
             destroy() {
-                window.removeEventListener("touchstart", start);
-                window.removeEventListener("touchmove", move);
+                node.removeEventListener("touchstart", start);
+                node.removeEventListener("touchmove", move);
                 window.removeEventListener("touchend", end);
-                window.removeEventListener("mousedown", start);
+                node.removeEventListener("mousedown", start);
                 window.removeEventListener("mousemove", move);
                 window.removeEventListener("mouseup", end);
-                window.removeEventListener("click", click);
             },
         };
     }
@@ -87,6 +81,5 @@
         top: calc(100% - 38px);
         cursor: pointer;
         user-select: none;
-        pointer-events: none;
     }
 </style>
