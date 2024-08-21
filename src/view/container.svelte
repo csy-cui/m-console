@@ -9,7 +9,7 @@
     export const logStore = setContext("LogStore", LogStore);
     export const storageStore = setContext("StorageStore", StorageStore);
 
-    console.log(NetworkStore,LogStore,StorageStore)
+    // console.log(NetworkStore,LogStore,StorageStore)
 </script>
 
 <Button></Button>
