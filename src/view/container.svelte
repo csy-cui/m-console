@@ -17,10 +17,11 @@
     }
     
 </script>
+<!-- 主题组件，避免产生css文件 -->
 <Theme bind:theme={theme}/>
-
+<!-- 悬浮按钮 -->
 <Button></Button>
-
+<!-- 面板 -->
 <div use:renderPanle id="_mConsole_panle" class="m-panle m_theme_var">
     <div class="m-panle-content"></div>
 </div>
