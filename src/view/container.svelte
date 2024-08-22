@@ -32,8 +32,8 @@
 <!-- 面板 -->
 <div use:renderPanle id="_mConsole_panle" class="m-panle m_theme_var">
     <div class="m-panle-content">
-        <div class="tab_component">
-            <div class="tab_header">
+        <div class="tab-component">
+            <div class="tab-header">
               {#each tabs as tab, i}
                 <button
                   class:active={activeTab === i}
@@ -41,7 +41,7 @@
               {/each}
             </div>
           
-            <div class="tab_content">
+            <div class="tab-content">
               <svelte:component this={tabs[activeTab].component} />
             </div>
           </div>
@@ -68,23 +68,23 @@
         left: 0;
     }
 
-    .tab_header {
+    .tab-header {
         display: flex;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid var(--tab-header-border);
     }
 
-    .tab_header button {
+    .tab-header button {
         padding: 10px 20px;
         border: none;
-        background-color: #f1f1f1;
+        background-color: var(--tab-header-default-background);
         cursor: pointer;
     }
 
-    .tab_header button.active {
-        background-color: #ccc;
+    .tab-header button.active {
+        background-color: var(--tab-header-active-background);
     }
 
-    .tab_content {
+    .tab-content {
         padding: 20px;
     }
 </style>
